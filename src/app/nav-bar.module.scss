@@ -1,0 +1,64 @@
+.nav-bar {
+  width: 100vw;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: var(--nav-background-color);
+  border: 1px #a9a9b7 solid;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
+  .branding {
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .branding-icon {
+      height: 1.25rem;
+      aspect-ratio: 1 / 1;
+      margin-right: 0.3rem;
+    }
+    .branding-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-left: 0.5rem;
+      a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        padding: 0.3rem 0.5rem;
+        color: var(--nav-button-color);
+        background-color: var(--nav-button-background-color);
+        border-radius: 4px;
+        transition: all 0.125s ease-out;
+        &:hover {
+          color: var(--nav-button-hover-color);
+          background-color: var(--nav-button-hover-background-color);
+        }
+      }
+      a.accent {
+        color: var(--nav-button-accent-color);
+        background-color: var(--nav-button-accent-background-color);
+        &:hover {
+          color: var(--nav-button-accent-hover-color);
+          background-color: var(--nav-button-accent-hover-background-color);
+        }
+      }
+    }
+  }
+}
