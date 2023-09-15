@@ -1,5 +1,6 @@
 import NavBar from "./nav-bar";
 import styles from "./page.module.scss";
+import "./styles/boxed-section.scss";
 
 export default function Home() {
   return (
@@ -7,28 +8,22 @@ export default function Home() {
       <NavBar />
       <main className={styles["section-container"]}>
         <section className={styles["landing-section"]}>
-          <p>
-            Keep track of your tasks with <strong>Todo</strong>.
-          </p>
-          <span>Get started today by logging in or signing up.</span>
+          <div className={styles["landing-items"]}>
+            <h1>
+              Keep track of your ideas with <strong>Notely</strong>.
+            </h1>
+            <span>Get started today by logging in or signing up.</span>
+          </div>
         </section>
-        <section className={styles["boxed-section"]}>
+        <section className="boxed-section">
           <h2>Features</h2>
           <ul>
-            <li>Create a project containing tasks</li>
-            <li>Keep track of your tasks</li>
-            <li>Share your tasks with others</li>
-            <li>Get notified when tasks are completed</li>
+            <li>Keep track of your notes.</li>
+            <li>Organize notes into categories.</li>
+            <li>Collaborate with others with groups.</li>
+            <li>Get notified when task list notes are completed.</li>
           </ul>
         </section>
-        {/*
-        <section className={styles["boxed-section"]}>
-          <h2>Get started</h2>
-          <ul>
-            <li>Log in</li>
-            <li>Sign up</li>
-          </ul>
-        </section> */}
       </main>
     </>
   );

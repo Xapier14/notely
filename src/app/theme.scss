@@ -1,0 +1,132 @@
+@import "colors.scss";
+
+body,
+div {
+  transition: all 0.125s ease-out;
+}
+
+:root,
+[data-theme="light"] {
+  /* Automatic & Manual Light Theme */
+  --color: #{$color-light};
+  --background-color: #{$background-color-light};
+
+  --nav-background-color: #{$nav-button-background-color-light};
+  --nav-button-color: #{$nav-button-color-light};
+  --nav-button-background-color: #{$nav-button-background-color-light};
+  --nav-button-hover-color: #{$nav-button-hover-color-light};
+  --nav-button-hover-background-color: #{$nav-button-hover-background-color-light};
+  --nav-button-accent-color: #{$nav-button-accent-color-light};
+  --nav-button-accent-background-color: #{$nav-button-accent-background-color-light};
+  --nav-button-accent-hover-color: #{$nav-button-accent-hover-color-light};
+  --nav-button-accent-hover-background-color: #{$nav-button-accent-hover-background-color-light};
+  --nav-button-accent-border-color: #{$nav-button-accent-border-color-light};
+
+  --boxed-section-background-color: #{$boxed-section-background-color-light};
+
+  --input-background-color: #{$input-background-color-light};
+  --input-color: #{$input-color-light};
+  --input-border-color: #{$input-border-color-light};
+  --input-border-focus-color: #{$input-border-focus-color-light};
+
+  --button-primary-color: #{$button-primary-color-light};
+  --button-primary-background-color: #{$button-primary-background-color-light};
+  --button-primary-hover-color: #{$button-primary-hover-color-light};
+  --button-primary-hover-background-color: #{$button-primary-hover-background-color-light};
+  --button-primary-border-color: #{$button-primary-border-color-light};
+
+  --button-secondary-color: #{$button-secondary-color-light};
+  --button-secondary-background-color: #{$button-secondary-background-color-light};
+  --button-secondary-hover-color: #{$button-secondary-hover-color-light};
+  --button-secondary-hover-background-color: #{$button-secondary-hover-background-color-light};
+  --button-secondary-border-color: #{$button-secondary-border-color-light};
+
+  --accent-color: #{$accent-color-light};
+  --landing-glow-color: #{$landing-glow-color-light};
+
+  --main-content-background-color: #{$main-content-background-color-light};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Automatic Dark Theme - Keep this in sync! */
+    --color: #{$color-dark};
+    --background-color: #{$background-color-dark};
+
+    --nav-background-color: #{$nav-button-background-color-dark};
+    --nav-button-color: #{$nav-button-color-dark};
+    --nav-button-background-color: #{$nav-button-background-color-dark};
+    --nav-button-hover-color: #{$nav-button-hover-color-dark};
+    --nav-button-hover-background-color: #{$nav-button-hover-background-color-dark};
+    --nav-button-accent-color: #{$nav-button-accent-color-dark};
+    --nav-button-accent-background-color: #{$nav-button-accent-background-color-dark};
+    --nav-button-accent-hover-color: #{$nav-button-accent-hover-color-dark};
+    --nav-button-accent-hover-background-color: #{$nav-button-accent-hover-background-color-dark};
+    --nav-button-accent-border-color: #{$nav-button-accent-border-color-dark};
+
+    --boxed-section-background-color: #{$boxed-section-background-color-dark};
+
+    --input-background-color: #{$input-background-color-dark};
+    --input-color: #{$input-color-dark};
+    --input-border-color: #{$input-border-color-dark};
+    --input-border-focus-color: #{$input-border-focus-color-dark};
+
+    --button-primary-color: #{$button-primary-color-dark};
+    --button-primary-background-color: #{$button-primary-background-color-dark};
+    --button-primary-hover-color: #{$button-primary-hover-color-dark};
+    --button-primary-hover-background-color: #{$button-primary-hover-background-color-dark};
+    --button-primary-border-color: #{$button-primary-border-color-dark};
+
+    --button-secondary-color: #{$button-secondary-color-dark};
+    --button-secondary-background-color: #{$button-secondary-background-color-dark};
+    --button-secondary-hover-color: #{$button-secondary-hover-color-dark};
+    --button-secondary-hover-background-color: #{$button-secondary-hover-background-color-dark};
+    --button-secondary-border-color: #{$button-secondary-border-color-dark};
+
+    --accent-color: #{$accent-color-dark};
+    --landing-glow-color: #{$landing-glow-color-dark};
+
+    --main-content-background-color: #{$main-content-background-color-dark};
+  }
+}
+
+[data-theme="dark"] {
+  /* Manual Dark Theme - Keep this in sync! */
+  --color: #{$color-dark};
+  --background-color: #{$background-color-dark};
+
+  --nav-background-color: #{$nav-button-background-color-dark};
+  --nav-button-color: #{$nav-button-color-dark};
+  --nav-button-background-color: #{$nav-button-background-color-dark};
+  --nav-button-hover-color: #{$nav-button-hover-color-dark};
+  --nav-button-hover-background-color: #{$nav-button-hover-background-color-dark};
+  --nav-button-accent-color: #{$nav-button-accent-color-dark};
+  --nav-button-accent-background-color: #{$nav-button-accent-background-color-dark};
+  --nav-button-accent-hover-color: #{$nav-button-accent-hover-color-dark};
+  --nav-button-accent-hover-background-color: #{$nav-button-accent-hover-background-color-dark};
+  --nav-button-accent-border-color: #{$nav-button-accent-border-color-dark};
+
+  --boxed-section-background-color: #{$boxed-section-background-color-dark};
+
+  --input-background-color: #{$input-background-color-dark};
+  --input-color: #{$input-color-dark};
+  --input-border-color: #{$input-border-color-dark};
+  --input-border-focus-color: #{$input-border-focus-color-dark};
+
+  --button-primary-color: #{$button-primary-color-dark};
+  --button-primary-background-color: #{$button-primary-background-color-dark};
+  --button-primary-hover-color: #{$button-primary-hover-color-dark};
+  --button-primary-hover-background-color: #{$button-primary-hover-background-color-dark};
+  --button-primary-border-color: #{$button-primary-border-color-dark};
+
+  --button-secondary-color: #{$button-secondary-color-dark};
+  --button-secondary-background-color: #{$button-secondary-background-color-dark};
+  --button-secondary-hover-color: #{$button-secondary-hover-color-dark};
+  --button-secondary-hover-background-color: #{$button-secondary-hover-background-color-dark};
+  --button-secondary-border-color: #{$button-secondary-border-color-dark};
+
+  --accent-color: #{$accent-color-dark};
+  --landing-glow-color: #{$landing-glow-color-dark};
+
+  --main-content-background-color: #{$main-content-background-color-dark};
+}

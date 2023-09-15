@@ -1,0 +1,28 @@
+.branding {
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.125s ease-out;
+  font-size: 1.2rem;
+  .branding-icon {
+    height: 75%;
+    min-height: 1.2rem;
+    aspect-ratio: 1 / 1;
+    margin-right: 0.3rem;
+  }
+  .branding-name {
+    font-weight: bold;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+  pointer-events: all;
+  &:hover {
+    color: var(--accent-color);
+  }
+}

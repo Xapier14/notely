@@ -1,6 +1,14 @@
+"use client";
+import style from "./layout.module.scss";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import AppNavBar from "./app-nav-bar";
+import { AuthContext } from "@/providers/AuthContext";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/hooks/useAuth";
+import { AuthState } from "@/services/AuthService";
+import OutletContainer from "./outlet-container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,10 +18,21 @@ export const metadata: Metadata = {
 };
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+  const [authState, authService] = useAuth(router);
+
   return (
     <>
-      <AppNavBar />
-      {children}
+      {authState === AuthState.LoggedIn ? (
+        <>
+          <div className={style["app-container"]}>
+            <AppNavBar />
+            <OutletContainer className={style["grow"]}>
+              {children}
+            </OutletContainer>
+          </div>
+        </>
+      ) : null}
     </>
   );
 }

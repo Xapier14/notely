@@ -1,1 +1,3 @@
-# Todo App
+# Notely
+
+A note-taking app.

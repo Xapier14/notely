@@ -1,5 +1,5 @@
 import "./globals.scss";
-import "./theme.css";
+import "./theme.scss";
 import type { Metadata } from "next";
 import Head from "next/head";
 import Script from "next/script";
@@ -8,8 +8,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Todo",
-  description: "A todo app.",
+  title: "Notely",
+  description: "A note-taking app.",
 };
 
 export default function RootLayout({
